@@ -1,64 +1,84 @@
-<h1 align= left>telegraph uploader bot</h1>
+# Telgh_bot - chat bot
+It is repository for chat bot: [@Telgh_bot](https://t.me/Telgh_bot)
 
-> Telegram bot that can upload videos, images and animations to the telegra.ph
-----
+## What it is?
+This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
 
-    
-<p align="center">
-<a href="https://python.org"><img src="http://forthebadge.com/images/badges/made-with-python.svg" alt="made-with-python"></a>
-<br>
-    <img src="https://img.shields.io/github/stars/sanila2007/telegraph-uploader-bot?style=for-the-badge" alt="Stars">
-    <img src="https://img.shields.io/github/forks/sanila2007/telegraph-uploader-bot?style=for-the-badge" alt="Forks">
-    <img src="https://img.shields.io/github/watchers/sanila2007/telegraph-uploader-bot?style=for-the-badge" alt="Watchers"> 
-<br>
-    <img src="https://img.shields.io/github/license/sanila2007/telegraph-uploader-bot?style=for-the-badge" alt="License">
-    <img src="https://img.shields.io/github/repo-size/sanila2007/telegraph-uploader-bot?style=for-the-badge" alt="Repository Size">
-    <img src="https://img.shields.io/github/contributors/sanila2007/telegraph-uploader-bot?style=for-the-badge" alt="Contributors">
-    <img src="https://img.shields.io/github/issues/sanila2007/telegraph-uploader-bot?style=for-the-badge" alt="Issues">
-</p>  
+[Bots.Business](https://bots.business) - it is probably the first CBPaaS - Chat Bot Platform as a Service.
+
+A CBPaaS is a cloud-based platform that enables developers to create chatbots without needing to build backend infrastructure.
+
+## Create your own bot for Telegram from this Git repo
+
+How to create bot?
+1. Create bot with [@BotFather](https://telegram.me/BotFather) and take Secret Token
+2. Create bot in App and add Secret Token
+3. Add Public Key from App as [Deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) with read access (and write access for bot exporting if you need it)
+4. Do import for this git repo
+
+Now you can talk with yours new Telegram Bot
+
+See [more](https://help.bots.business/getting-started)
+
+## Commands - in commands folder
+File name - it is command name (Bot it can be rewritten in command description)
+
+Command can have: `name`, `help`, `aliases` (second names), `answer`, `keyboard`, `scnarios` (for simple logic) and other options.
+
+### Command description
+It is file header:
+
+    /*CMD
+      command: /test
+      help: this is help for ccommand
+      need_reply: [ true or false here ]
+      auto_retry_time: [ time in sec ]
+      answer: it is example answer for /test command
+      keyboard: button1, button2
+      aliases: /test2, /test3
+    CMD*/
+
+See [more](https://help.bots.business/commands)
+
+### Command body
+It is command code in JavaScript.
+Use Bot Java Script for logic in command.
+
+For example:
+> Bot.sendMessage(2+2);
+
+See [more](https://help.bots.business/scenarios-and-bjs)
 
 
-## Config Vars
-1. `API_ID` : Telegram API_ID, get it from my.telegram.org/apps
-2. `API_HASH` : Telegram API_HASH, get it from my.telegram.org/apps
-3. `BOT_TOKEN` : A Valid Telegram Bot Token, get it from @Botfather
+## Libraries - in libs folder
+You can store common code in the libs folder. File name - it is library name.
 
-## Features of this bot
+For example code in myLib.js:
 
-- Upload images to telegraph
-- Upload videos to telegraph
-- Upload animations to telegraph
-- Very fast bot
-- 24/7 works
-  
-## Deployment Methods
+    function hello(){ Bot.sendMessage("Hello from lib!") }
+    function goodbye(name){ Bot.sendMessage("Goodbye, " + name) }
 
-### Heroku
+    publish({
+      sayHello: hello,
+      sayGoodbyeTo: goodbye
+    })
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sanila2007/telegraph-uploader-bot)
- 
-## Warning
- ● This is under <b>GNU General Public License v3.0.</b><br><br>
- ● You are free to use this code in any of your projects, but you MUST include the following in your `README.md` (Copy & paste)<br>
+then you can run in any bot's command:
 
-```
-## Credits
- 
--[telegraph-uploader-bot] (https://github.com/sanila2007/telegraph-uploader-bot)
+    Libs.myLib.hello()
+    Libs.myLib.sayGoodbyeTo("Alice")
 
-```
+See [more](https://help.bots.business/git/library)
 
-## Note: <br>
+## Other bots example
+See other bots examples in the [github](https://github.com/bots-business?utf8=✓&tab=repositories&q=&type=public&language=javascript) or in the [Bot Store](https://bots.business/)
 
-<pre>I don't officially support forks / Clones for this feedback bot,
-So don't tag admins for errors of your deploy/code, 
-If any errors you should fix it yourself!!</pre>
 
-## Credits: <br>
- • <a href="https://github.com/sanila2007">Sanila Ranatunga</a> <br>
- • <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a> 
-  
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/sanila2007/feedback-bot)   
+## Other help
+[Help.bots.business](https://help.bots.business)
 
-> Made with 💞 by <a href="https://github.com/sanila2007">@sanila2007</a> 
-   
+## API
+See [API](https://api.bots.business/docs#/docs/summary)
+
+
+![](https://bots.business/images/web-logo.png)
