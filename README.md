@@ -35,7 +35,7 @@
 
 ### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sanila2007/telegraph-uploader-bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/botza69/telegraph-up-bot)
  
 ## Warning
  ● This is under <b>GNU General Public License v3.0.</b><br><br>
